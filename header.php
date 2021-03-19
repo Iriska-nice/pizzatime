@@ -22,8 +22,8 @@
 
     <title>PizzaTime — пицца в Москве от итальянского повара</title>
 
-    
-<?php wp_head(); ?>
+
+    <?php wp_head(); ?>
 
 </head>
 
@@ -33,9 +33,7 @@
     <header class="header-page">
         <div class="container header-page__container">
             <div class="header-page__start">
-                <div class="logo">
-                    <img class="logo__img lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="<?php echo get_template_directory_uri(); ?>/assets/img/common/logo.svg" alt="" width="127" height="21">
-                </div>
+                <?php echo csl_CustomSiteLogo_show_logo(); ?>
             </div>
             <div class="header-page__end">
                 <nav class="header-page__nav">
@@ -58,7 +56,7 @@
                     </ul>
                 </nav>
                 <div class="phone">
-                    <a class="phone__item header-page__phone" href="tel:+79999999999">+7 (999) 999-99-99</a>
+                    <?php echo do_shortcode('[contact-form-7 id="20" title="Phone-Button"]');?>
                 </div>
                 <div class="header-page__hamburger">
                     <button class="btn-menu" type="button" data-popup="popup-menu">

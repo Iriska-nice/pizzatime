@@ -40,7 +40,6 @@ Template Name: Главная
                 </ul>
             </nav>
         </header>
-
         <div class="catalog">
             <div class="catalog__item" data-category="mushrooms">
                 <div class="product catalog__product">
@@ -324,7 +323,7 @@ Template Name: Главная
                 <div class="contacts__item">
                     <h3 class="contacts__title">Телефон</h3>
                     <p class="contacts__text">
-                        <a class="contacts__phone" href="tel:+79117112123">+7 (911) 711-21-23</a>
+                        <?php echo do_shortcode('[contact-form-7 id="19" title="Phone"]'); ?>
                     </p>
                 </div>
                 <div class="contacts__item">
