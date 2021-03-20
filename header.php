@@ -37,7 +37,8 @@
             </div>
             <div class="header-page__end">
                 <nav class="header-page__nav">
-                    <ul class="header-page__ul">
+                    <?php wp_nav_menu(['menu' => 'Main-Menu-Header']); ?>
+<!--                    <ul class="header-page__ul">
                         <li class="header-page__li">
                             <a class="header-page__link" href="#" data-scroll-to="section-catalog">
                                 <span class="header-page__text">пицца</span>
@@ -54,9 +55,10 @@
                             </a>
                         </li>
                     </ul>
+-->
                 </nav>
                 <div class="phone">
-                    <?php echo do_shortcode('[contact-form-7 id="20" title="Phone-Button"]');?>
+                    <?php echo do_shortcode('[contact-form-7 id="20" title="Phone-Button"]'); ?>
                 </div>
                 <div class="header-page__hamburger">
                     <button class="btn-menu" type="button" data-popup="popup-menu">
