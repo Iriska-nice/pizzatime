@@ -23,25 +23,26 @@ Template Name: Главная
     <div class="container">
         <header class="section__header">
             <h2 class="page-title page-title--accent">Меню</h2>
-            <nav class="catalog-nav">
-                <ul class="catalog-nav__wrapper">
-                    <li class="catalog-nav__item">
-                        <button class="catalog-nav__btn is-active" type="button" data-filter="all">все</button>
-                    </li>
-                    <li class="catalog-nav__item">
-                        <button class="catalog-nav__btn" type="button" data-filter="mushrooms">грибные</button>
-                    </li>
-                    <li class="catalog-nav__item">
-                        <button class="catalog-nav__btn" type="button" data-filter="meat">мясные</button>
-                    </li>
-                    <li class="catalog-nav__item">
-                        <button class="catalog-nav__btn" type="button" data-filter="cheese">сырные</button>
-                    </li>
-                </ul>
-            </nav>
         </header>
         <div class="catalog">
-            <div class="catalog__item" data-category="mushrooms">
+            <label class="catalog-nav__btn" for="all">Все</label>
+            <input type="radio" id="all" name="pizza" />
+            <label class="catalog-nav__btn" for="gribnye">Грибные</label>
+            <input type="radio" id="gribnye" name="pizza" />
+            <label class="catalog-nav__btn" for="mjasnye">Мясные</label>
+            <input type="radio" id="mjasnye" name="pizza" />
+            <label class="catalog-nav__btn" for="syrnye">Сырные</label>
+            <input type="radio" id="syrnye" name="pizza" />
+            <div class="AnimationCut gribnye">
+                <?php echo do_shortcode('[shop-page-wp category="gribnye"]'); ?>
+            </div>
+            <div class="AnimationCut mjasnye">
+                <?php echo do_shortcode('[shop-page-wp category="mjasnye"]'); ?>
+            </div>
+            <div class="AnimationCut syrnye">
+                <?php echo do_shortcode('[shop-page-wp category="syrnye"]'); ?>
+            </div>
+            <!--            <div class="catalog__item" data-category="mushrooms">
                 <div class="product catalog__product">
                     <picture>
                         <source type="image/webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-srcset="<?php echo get_template_directory_uri(); ?>/assets/img/section-catalog/1.webp">
@@ -282,8 +283,9 @@ Template Name: Главная
                         </div>
                     </footer>
                 </div>
-            </div>
+-->
         </div>
+    </div>
     </div>
 </section>
 <!-- /.section-catalog -->

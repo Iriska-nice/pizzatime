@@ -179,7 +179,7 @@
 /* scrollTo end */
 
 /* catalog start */
-;(function() {
+/*;(function() {
   var catalogSection = document.querySelector('.section-catalog');
 
   if (catalogSection === null) {
@@ -233,7 +233,7 @@
 
     updateChildren(catalog, filteredItems);
   });
-})();
+})();*/
 /* catalog end */
 
 /* product start */
